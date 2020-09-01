@@ -6,4 +6,5 @@ from . import models
 class SpendingSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Spending
-        fields = ('date', 'amount', 'currency', 'description',)
+        fields = ('id', 'date', 'amount', 'currency', 'description',)
+        read_only_fields = ['id']
